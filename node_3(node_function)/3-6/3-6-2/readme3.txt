@@ -1,0 +1,1 @@
+i'm translated little little bit. divided part called chunk.
