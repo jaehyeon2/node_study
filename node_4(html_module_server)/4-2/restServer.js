@@ -1,7 +1,7 @@
-const http=request("http");
-const fs=request("fs").promises;
+const http=require("http");
+const fs=require("fs").promises;
 
-const user={};//data saving value
+const users={};//data saving value
 
 http.createServer(async (req, res)=>{
 	try{
