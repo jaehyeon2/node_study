@@ -41,7 +41,7 @@ http.createServer(async (req, res)=>{
 					const {name}=JSON.parse(body);
 					const id=Date.now();
 					users[id]=name;
-					res.writeHead(201);
+					res.writeHead(201, { 'Content-Type': 'text/plain; charset=utf-8' });
 					res.end("complete");
 				});
 			}
@@ -56,7 +56,8 @@ http.createServer(async (req, res)=>{
 				return req.on("end", ()=>{
 					console.log("PUT body:", body);
 					users[key]=JSON.parse(body).name;
-					return res.end(JSON.stringify(users));
+					res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+        			return res.end('ok');
 				});
 			}
 		}
@@ -64,7 +65,8 @@ http.createServer(async (req, res)=>{
 			if(req.url.startsWith("/user/")){
 				const key=req.url.split("/")[2];
 				delete users[key];
-				return res.end(JSON.stringify(users));
+				res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+      			return res.end('ok');
 			}
 		}
 		res.writeHead(404);
