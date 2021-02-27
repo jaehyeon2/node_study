@@ -1,0 +1,22 @@
+{
+  "name": "npmtest",
+  "version": "0.0.1",
+  "description": "hello package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://97534e863a43c12ae3f5fbb49c3f5760c366cde2@github.com/jaehyeon2/node_study.git"
+  },
+  "author": "jaehyeon2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaehyeon2/node_study/issues"
+  },
+  "homepage": "https://github.com/jaehyeon2/node_study#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
