@@ -36,8 +36,8 @@ async function getUser(){
 				}
 			});
 			userDiv.appendChild(span);
-			userDiv.appentChild(edit);
-			userDiv.appentChild(remove);
+			userDiv.appendChild(edit);
+			userDiv.appendChild(remove);
 			list.appendChild(userDiv);
 			console.log(res.data);
 		});
@@ -52,7 +52,7 @@ document.getElementById("form").addEventListener("submit", async(e)=>{
 	e.preventDefault();
 	const name=e.target.username.value;
 	if(!name){
-		alert("이름을 입력하세요!");
+		return alert("이름을 입력하세요!");
 	}
 	try{
 		await axios.post("/user", {name});

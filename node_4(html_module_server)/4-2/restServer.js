@@ -17,8 +17,8 @@ http.createServer(async (req, res)=>{
 				res.writeHead(200, {"Content-Type":"text/html; charset=utf-8"});
 				return res.end(data);
 			}
-			else if(req.url==="./users"){
-				res.writeHead(200, {"Content-Type":"text/html; charset=utf-8"});
+			else if(req.url==="/users"){
+				res.writeHead(200, {"Content-Type":"application/json; charset=utf-8"});
 				return res.end(JSON.stringify(users));
 			}
 			try{
@@ -51,7 +51,7 @@ http.createServer(async (req, res)=>{
 				const key=req.url.split("/")[2];
 				let body="";
 				req.on("data", (data)=>{
-					bodt+=data;
+					body+=data;
 				});
 				return req.on("end", ()=>{
 					console.log("PUT body:", body);
@@ -74,7 +74,7 @@ http.createServer(async (req, res)=>{
 	}
 	catch(err){
 		console.error(err);
-		res.writeHead(500);
+		res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
 		res.end(err);
 	}
 })
