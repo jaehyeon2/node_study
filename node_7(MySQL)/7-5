@@ -1,0 +1,13 @@
+CRUD(CREATE, READ, UPDATE, DELETE)
+
+CREATE - 데이터를 생성해서 DB에 추가
+INSERT INTO nodejs.users (name, age, married, comment) VALUES ("kang", 22, 0, "Hello! KANG");
+INSERT INTO nodejs.users (name, age, married, comment) VALUES ("kim", 24, 1, "Hello! KIM");
+INSERT INTO nodejs.comments (commenter, comment) VALUES (1, "Hello!, KANG's comment");
+(nodejs 생략 가능)
+
+READ - DB에 있는 데이터 조회
+SELECT * FROM nodejs.users;
+SELECT * FROM nodejs.comments;
+SELECT name, married FROM nodejs.users; // 특정 데이터만 조회 가능
+SELECT name, age FROM nodejs.users WHERE married = 1 AND age > 30;
