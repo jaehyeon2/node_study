@@ -9,5 +9,15 @@ INSERT INTO nodejs.comments (commenter, comment) VALUES (1, "Hello!, KANG's comm
 READ - DB에 있는 데이터 조회
 SELECT * FROM nodejs.users;
 SELECT * FROM nodejs.comments;
-SELECT name, married FROM nodejs.users; // 특정 데이터만 조회 가능
-SELECT name, age FROM nodejs.users WHERE married = 1 AND age > 30;
+SELECT name, married FROM nodejs.users; // 특정 데이터만 조회
+SELECT name, age FROM nodejs.users WHERE married = 1 AND age > 30; // WHERE절을 이용한 조건
+SELECT id, name, age FROM nodejs.users WHERE married = 1 OR age > 30; // OR 사용
+SELECT id, name, age FROM nodejs.users ORDER BY age DESC; // ASC/DESC를 이용하여 검색 결과 정렬
+SELECT id, name, age FROM nodejs.users ORDER BY age DESC LIMIT 2; // LIMIT를 이용해 표시될 줄 갯수 설정
+SELECT id, name, age FROM nodejs.users ORDER BY age DESC LIMIT 2 OFFSET 1; //OFFSET을 이용해 처음에 건너 뛸 줄 갯수 설정
+
+UPDATE - DB에 있는 데이터 수정
+UPDATE nodejs.users SET comment = "바꿀 내용" WHERE name = "kang"; //UPDATE [TABLE NAME] SET [column="change value"] WHERE [condition];
+
+DELETE - DB에 있는 데이터 삭제
+DELETE FROM nodejs.users WHERE id=2; //DELETE FROM [TABLE NAME] WHERE [condition];
