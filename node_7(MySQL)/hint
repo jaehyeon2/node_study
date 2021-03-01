@@ -1,0 +1,3 @@
+mysql -h localhost -u root -p
+=>mysql 접속 명령어
+=>password 입력
