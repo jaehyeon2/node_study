@@ -2,7 +2,7 @@
   "name": "learn-sequelize",
   "version": "0.0.1",
   "description": "learn sequelize",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
     "nunjucks": "^3.2.3",
     "sequelize": "^6.5.0",
     "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
