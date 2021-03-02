@@ -5,5 +5,4 @@ mysql -h localhost -u root -p
 
 ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
 ->
-chmod 755 -R /var/lib/mysql
-chown mysql:mysql -R /var/lib/mysql
+service mysql start
