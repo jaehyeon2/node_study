@@ -6,3 +6,6 @@ mysql -h localhost -u root -p
 ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
 ->
 service mysql start
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[yourPassword]';
+->password setting
