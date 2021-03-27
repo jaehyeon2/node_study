@@ -7,3 +7,6 @@ db.createUser({user:"이름", pwd:"비밀번호", roles:["root"]})
 
 mongoDB 접속
 mongo admin -u <name> -p
+
+using DB
+use [DBname]

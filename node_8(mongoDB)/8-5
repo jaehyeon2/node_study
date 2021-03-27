@@ -1,0 +1,21 @@
+CREATE
+db.users.save({name:"kang", age:22, married:false, comment:"Hello mongoDB", createdAt:new Date()});
+db.users.save({name:"choi", age:23, married:false, comment:"Hello, kang's friend choi", createdAt:new Date()});
+db.users.find({name:"choi"}, {_id:2})
+
+kang ObjectId("605e92c33aa7c983c69f8182")
+
+READ
+db.users.find({});
+db.comments.find({});
+db.users.find({age:{$lt:30}, married:false}, {_id:0, name:1, age:1});
+첫번째 필드:조회시 조건  두번째 필드:조회할 필드
+
+limit():조회할 다큐먼트 개수
+skip():건너뛸 다큐먼트 개수
+
+UPDATE
+db.users.update({name:"kang"}, {$set:{comment:"hello, comment change"}});
+
+DELETE
+db.users.remove({name:"kang2"});
