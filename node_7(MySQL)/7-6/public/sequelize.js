@@ -98,7 +98,7 @@ async function getComment(id){
 }
 //enter user
 document.getElementById("user-form").addEventListener("submit", async (e)=>{
-	e.prenentDefault();
+	e.preventDefault();
 	const name=e.target.username.value;
 	const age=e.target.age.value;
 	const married=e.target.married.checked;
