@@ -112,7 +112,7 @@ document.getElementById("user-form").addEventListener("submit", async (e)=>{
 	} catch (err) {
 		console.error(err);
 	}
-	e.target.name.value="";
+	e.target.username.value="";
 	e.target.age.value="";
 	e.target.married.checked=false;
 });

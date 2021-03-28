@@ -3,7 +3,7 @@ const Comment=require("../schemas/comment");
 
 const router=express.Router();
 
-router.post(async (req, res, next)=>{
+router.post("/", async (req, res, next)=>{
 	try{
 		const comment=await Comment.create({
 			commenter:req.body.id,

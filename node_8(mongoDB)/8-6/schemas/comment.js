@@ -4,7 +4,7 @@ const {Schema}=mongoose;
 const{Types:{ObjectId}}=Schema;
 const commentSchema=new Schema({
 	commenter:{
-		type:ObjecteId,
+		type:ObjectId,
 		required:true,
 		ref:"User",
 	},
